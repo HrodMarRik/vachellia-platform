@@ -8,23 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <!-- Vachellia Brand Config -->
-    <script src="vachellia-brand-config.js"></script>
     <link rel="stylesheet" href="vachellia-custom.css">
-    <!-- Vachellia Brand Enhancements -->
-    <link rel="stylesheet" href="vachellia-brand-enhancements.css">
 </head>
 <body class="bg-light">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand vachellia-logo" href="index.html">
-                <img src="images/Vachellia.png" alt="Vachellia Logo">
-                Vachellia
+                <i class="fas fa-handshake me-2"></i>Vachellia
             </a>
         </div>
     </nav>
@@ -209,35 +202,6 @@
                 }, 5000);
             }
         }
-    </script>
-    <!-- Theme Toggle Script -->
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const themeIcon = document.getElementById("theme-icon");
-            const currentTheme = body.getAttribute("data-theme");
-            
-            if (currentTheme === "dark") {
-                body.removeAttribute("data-theme");
-                themeIcon.className = "fas fa-moon";
-                localStorage.setItem("theme", "light");
-            } else {
-                body.setAttribute("data-theme", "dark");
-                themeIcon.className = "fas fa-sun";
-                localStorage.setItem("theme", "dark");
-            }
-        }
-
-        // Load saved theme
-        document.addEventListener("DOMContentLoaded", function() {
-            const savedTheme = localStorage.getItem("theme");
-            const themeIcon = document.getElementById("theme-icon");
-            
-            if (savedTheme === "dark") {
-                document.body.setAttribute("data-theme", "dark");
-                themeIcon.className = "fas fa-sun";
-            }
-        });
     </script>
 </body>
 </html>

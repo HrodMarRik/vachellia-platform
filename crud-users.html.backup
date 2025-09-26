@@ -8,29 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <!-- Vachellia Brand Config -->
-    <script src="vachellia-brand-config.js"></script>
     <link rel="stylesheet" href="vachellia-custom.css">
-    <!-- Vachellia Brand Enhancements -->
-    <link rel="stylesheet" href="vachellia-brand-enhancements.css">
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <button class="theme-toggle-btn" onclick="toggleTheme()">
-            <i class="fas fa-moon" id="theme-icon"></i>
-        </button>
-    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand vachellia-logo" href="index.html">
-                <img src="images/Vachellia.png" alt="Vachellia Logo">
-                Vachellia
+                <i class="fas fa-handshake me-2"></i>Vachellia
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

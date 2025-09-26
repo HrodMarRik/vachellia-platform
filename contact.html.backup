@@ -8,29 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
-    <!-- Vachellia Brand Config -->
-    <script src="vachellia-brand-config.js"></script>
     <link rel="stylesheet" href="vachellia-custom.css">
-    <!-- Vachellia Brand Enhancements -->
-    <link rel="stylesheet" href="vachellia-brand-enhancements.css">
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <button class="theme-toggle-btn" onclick="toggleTheme()">
-            <i class="fas fa-moon" id="theme-icon"></i>
-        </button>
-    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand vachellia-logo" href="index.html">
-                <img src="images/Vachellia.png" alt="Vachellia Logo">
-                Vachellia
+                <i class="fas fa-handshake me-2"></i>Vachellia
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -44,9 +31,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">À propos</a>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pricing.html">Tarifs</a>
@@ -351,8 +335,7 @@
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <h5 class="mb-3">
-                        <img src="images/Vachellia.png" alt="Vachellia Logo">
-                Vachellia
+                        <i class="fas fa-handshake me-2"></i>Vachellia
                     </h5>
                     <p class="mb-3">La plateforme qui révolutionne la mise en relation professionnelle.</p>
                     <div class="d-flex">
@@ -367,8 +350,6 @@
                     <h6 class="mb-3">Plateforme</h6>
                     <ul class="list-unstyled">
                         <li><a href="about.html" class="text-light-50">À propos</a></li>
-                        <li><a href="portfolio.html" class="text-light-50">Portfolio</a></li>
-                        <li><a href="blog.html" class="text-light-50">Blog</a></li>
                         <li><a href="pricing.html" class="text-light-50">Tarifs</a></li>
                         <li><a href="blog.html" class="text-light-50">Blog</a></li>
                         <li><a href="contact.html" class="text-light-50">Contact</a></li>

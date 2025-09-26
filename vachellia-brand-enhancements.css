@@ -1,0 +1,375 @@
+/* Vachellia Brand Enhancements - Styles supplémentaires pour uniformiser */
+
+/* Import du fichier de configuration */
+@import url('vachellia-brand-config.js');
+
+/* Variables CSS supplémentaires pour la cohérence */
+:root {
+    /* Couleurs de la charte graphique Vachellia */
+    --vachellia-teal: #2D5A5A;
+    --vachellia-gold: #D4AF37;
+    --vachellia-emerald: #00C896;
+    --vachellia-light-blue: #4A90E2;
+    --vachellia-light-green: #7ED321;
+    --vachellia-coral: #FF6B6B;
+    --vachellia-purple: #8B5CF6;
+    --vachellia-orange: #FF8C42;
+    --vachellia-light-gray: #F5F7FA;
+    
+    /* Typographie Inter */
+    --vachellia-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Espacements cohérents */
+    --vachellia-space-xs: 0.25rem;
+    --vachellia-space-sm: 0.5rem;
+    --vachellia-space-md: 1rem;
+    --vachellia-space-lg: 1.5rem;
+    --vachellia-space-xl: 2rem;
+    --vachellia-space-xxl: 3rem;
+    
+    /* Bordures arrondies */
+    --vachellia-radius-sm: 4px;
+    --vachellia-radius-md: 8px;
+    --vachellia-radius-lg: 12px;
+    --vachellia-radius-xl: 16px;
+    --vachellia-radius-xxl: 20px;
+    
+    /* Ombres modernes */
+    --vachellia-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --vachellia-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --vachellia-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.16);
+    --vachellia-shadow-xl: 0 16px 32px rgba(0, 0, 0, 0.20);
+}
+
+/* Styles globaux pour la cohérence */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--vachellia-font);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+/* Logo Vachellia uniformisé */
+.vachellia-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--vachellia-teal);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.vachellia-logo:hover {
+    color: var(--vachellia-gold);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.vachellia-logo img {
+    height: 40px;
+    width: auto;
+    margin-right: var(--vachellia-space-sm);
+    transition: all 0.3s ease;
+}
+
+.vachellia-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Boutons Vachellia */
+.btn-vachellia-primary {
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: var(--vachellia-radius-lg);
+    padding: var(--vachellia-space-sm) var(--vachellia-space-lg);
+    box-shadow: var(--vachellia-shadow-md);
+    transition: all 0.3s ease;
+}
+
+.btn-vachellia-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--vachellia-shadow-lg);
+    color: white;
+}
+
+.btn-vachellia-secondary {
+    background: linear-gradient(135deg, var(--vachellia-gold) 0%, #f4d03f 100%);
+    border: none;
+    color: var(--vachellia-teal);
+    font-weight: 600;
+    border-radius: var(--vachellia-radius-lg);
+    padding: var(--vachellia-space-sm) var(--vachellia-space-lg);
+    box-shadow: var(--vachellia-shadow-md);
+    transition: all 0.3s ease;
+}
+
+.btn-vachellia-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--vachellia-shadow-lg);
+    color: var(--vachellia-teal);
+}
+
+/* Cards Vachellia */
+.vachellia-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--vachellia-radius-xxl);
+    box-shadow: var(--vachellia-shadow-md);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.vachellia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--vachellia-shadow-xl);
+}
+
+/* Headers Vachellia */
+.vachellia-header {
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 50%, var(--vachellia-gold) 100%);
+    color: white;
+    padding: var(--vachellia-space-xxl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.vachellia-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.vachellia-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer Vachellia */
+.vachellia-footer {
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, #1a4a4a 100%);
+    color: white;
+    padding: var(--vachellia-space-xxl) 0 var(--vachellia-space-xl);
+    position: relative;
+}
+
+.vachellia-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--vachellia-gold), transparent);
+}
+
+/* Navigation Vachellia */
+.navbar-vachellia {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--vachellia-shadow-md);
+    transition: all 0.3s ease;
+    padding: var(--vachellia-space-md) 0;
+}
+
+.navbar-vachellia .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    margin: 0 var(--vachellia-space-sm);
+    padding: var(--vachellia-space-sm) var(--vachellia-space-md) !important;
+    border-radius: var(--vachellia-radius-md);
+}
+
+.navbar-vachellia .nav-link:hover {
+    color: var(--vachellia-gold) !important;
+    transform: translateY(-1px);
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.navbar-vachellia .nav-link.active {
+    color: var(--vachellia-teal) !important;
+    font-weight: 600;
+    background: rgba(45, 90, 90, 0.1);
+}
+
+.navbar-vachellia .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--vachellia-teal), var(--vachellia-gold));
+    border-radius: 2px;
+}
+
+/* Theme toggle Vachellia */
+.theme-toggle {
+    position: fixed;
+    top: var(--vachellia-space-lg);
+    right: var(--vachellia-space-lg);
+    z-index: 1000;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: var(--vachellia-space-sm) var(--vachellia-space-md);
+    box-shadow: var(--vachellia-shadow-lg);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--vachellia-shadow-xl);
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: rotate(180deg);
+}
+
+/* Animations Vachellia */
+@keyframes vachelliaFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes vachelliaSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vachelliaSlideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes vachelliaPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.vachellia-fade-in-up {
+    animation: vachelliaFadeInUp 0.6s ease-out;
+}
+
+.vachellia-slide-in-left {
+    animation: vachelliaSlideInLeft 0.6s ease-out;
+}
+
+.vachellia-slide-in-right {
+    animation: vachelliaSlideInRight 0.6s ease-out;
+}
+
+.vachellia-pulse {
+    animation: vachelliaPulse 2s infinite;
+}
+
+/* Responsive Vachellia */
+@media (max-width: 768px) {
+    .vachellia-logo {
+        font-size: 1.3rem;
+    }
+    
+    .vachellia-logo img {
+        height: 35px;
+    }
+    
+    .theme-toggle {
+        top: var(--vachellia-space-md);
+        right: var(--vachellia-space-md);
+        padding: var(--vachellia-space-xs) var(--vachellia-space-sm);
+    }
+    
+    .vachellia-header {
+        padding: var(--vachellia-space-xl) 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .vachellia-logo {
+        font-size: 1.2rem;
+    }
+    
+    .vachellia-logo img {
+        height: 30px;
+    }
+    
+    .vachellia-header {
+        padding: var(--vachellia-space-lg) 0;
+    }
+}
+
+/* Scrollbar personnalisée Vachellia */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--vachellia-teal), var(--vachellia-gold));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--vachellia-gold), var(--vachellia-teal));
+}
+
+/* Sélection de texte Vachellia */
+::selection {
+    background: var(--vachellia-gold);
+    color: var(--vachellia-teal);
+}
+
+::-moz-selection {
+    background: var(--vachellia-gold);
+    color: var(--vachellia-teal);
+}
