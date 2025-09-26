@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vachellia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="vachellia-custom.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand vachellia-logo" href="index.html">
+                <img src="images/Vachellia.png" alt="Vachellia Logo">
+                Vachellia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-portfolio.html">Mon Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Tarifs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Display -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Portfolio Header -->
+                    <div class="card border-0 shadow-lg mb-4">
+                        <div class="card-body text-center p-5">
+                            <img id="profileImage" src="https://via.placeholder.com/150x150/2D5A5A/FFFFFF?text=Photo" 
+                                 alt="Photo de profil" class="rounded-circle mb-4" style="width: 150px; height: 150px; object-fit: cover;">
+                            
+                            <h1 id="portfolioName" class="mb-2">Nom du Portfolio</h1>
+                            <h3 id="portfolioTitle" class="text-muted mb-3">Titre Professionnel</h3>
+                            <p id="portfolioLocation" class="text-muted mb-4">
+                                <i class="fas fa-map-marker-alt me-2"></i>Localisation
+                            </p>
+                            
+                            <div id="portfolioSkills" class="mb-4">
+                                <!-- Skills will be displayed here -->
+                            </div>
+                            
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn btn-primary btn-lg" onclick="likePortfolio()">
+                                    <i class="fas fa-heart me-2"></i><span id="likeText">Like</span>
+                                </button>
+                                <button class="btn btn-outline-primary btn-lg" onclick="contactPortfolio()">
+                                    <i class="fas fa-envelope me-2"></i>Contacter
+                                </button>
+                                <button class="btn btn-outline-secondary btn-lg" onclick="sharePortfolio()">
+                                    <i class="fas fa-share me-2"></i>Partager
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Content -->
+                    <div class="row g-4">
+                        <!-- About Section -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-user me-2"></i>À propos
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <p id="portfolioDescription" class="text-muted">Description du portfolio...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience Section -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-briefcase me-2"></i>Expérience
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <p id="portfolioExperience" class="text-muted">Expérience professionnelle...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Section -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-graduation-cap me-2"></i>Formation
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <p id="portfolioEducation" class="text-muted">Formation et diplômes...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Section -->
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-share-alt me-2"></i>Liens
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div id="portfolioLinks" class="d-flex flex-column gap-2">
+                                        <!-- Links will be displayed here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Stats -->
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-3">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" id="viewsCount">0</div>
+                                <p class="mb-0">Vues</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" id="likesCount">0</div>
+                                <p class="mb-0">Likes</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" id="contactsCount">0</div>
+                                <p class="mb-0">Contacts</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-card text-center">
+                                <div class="stat-number" id="sharesCount">0</div>
+                                <p class="mb-0">Partages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vachellia-footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <img src="images/Vachellia.png" alt="Vachellia Logo" style="height: 30px; margin-right: 10px;">
+                        Vachellia
+                    </h5>
+                    <p class="mb-3">La plateforme qui révolutionne la mise en relation professionnelle.</p>
+                    <div class="d-flex">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Plateforme</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light-50">À propos</a></li>
+                        <li><a href="portfolio.html" class="text-light-50">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-light-50">Tarifs</a></li>
+                        <li><a href="blog.html" class="text-light-50">Blog</a></li>
+                        <li><a href="contact.html" class="text-light-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Recherche d'emploi</a></li>
+                        <li><a href="#" class="text-light-50">Recrutement</a></li>
+                        <li><a href="#" class="text-light-50">Freelance</a></li>
+                        <li><a href="#" class="text-light-50">Alternance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Aide</a></li>
+                        <li><a href="#" class="text-light-50">FAQ</a></li>
+                        <li><a href="#" class="text-light-50">CGU</a></li>
+                        <li><a href="#" class="text-light-50">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Légal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Mentions légales</a></li>
+                        <li><a href="#" class="text-light-50">RGPD</a></li>
+                        <li><a href="#" class="text-light-50">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Vachellia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Fait avec <i class="fas fa-heart text-danger"></i> en France</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        let portfolioId = null;
+        let isLiked = false;
+
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+            }
+
+            // Get portfolio ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            portfolioId = urlParams.get('id');
+            
+            if (portfolioId) {
+                loadPortfolio(portfolioId);
+            } else {
+                showNotification('Portfolio non trouvé', 'error');
+            }
+        });
+
+        // Load portfolio by ID
+        function loadPortfolio(id) {
+            // In a real application, this would fetch from a database
+            // For demo purposes, we'll use localStorage
+            const portfolioData = JSON.parse(localStorage.getItem('userPortfolio') || '{}');
+            
+            if (portfolioData.id === id) {
+                displayPortfolio(portfolioData);
+                updateViews();
+            } else {
+                // Try to find in demo portfolios
+                const demoPortfolios = getDemoPortfolios();
+                const portfolio = demoPortfolios.find(p => p.id === id);
+                
+                if (portfolio) {
+                    displayPortfolio(portfolio);
+                    updateViews();
+                } else {
+                    showNotification('Portfolio non trouvé', 'error');
+                }
+            }
+        }
+
+        // Display portfolio data
+        function displayPortfolio(portfolioData) {
+            document.getElementById('portfolioName').textContent = `${portfolioData.firstName} ${portfolioData.lastName}`;
+            document.getElementById('portfolioTitle').textContent = portfolioData.title || 'Titre Professionnel';
+            document.getElementById('portfolioLocation').innerHTML = `<i class="fas fa-map-marker-alt me-2"></i>${portfolioData.location || 'Localisation'}`;
+            document.getElementById('portfolioDescription').textContent = portfolioData.description || 'Description du portfolio...';
+            document.getElementById('portfolioExperience').textContent = portfolioData.experience || 'Expérience professionnelle...';
+            document.getElementById('portfolioEducation').textContent = portfolioData.education || 'Formation et diplômes...';
+
+            // Display skills
+            const skillsContainer = document.getElementById('portfolioSkills');
+            if (portfolioData.skills && portfolioData.skills.length > 0) {
+                skillsContainer.innerHTML = portfolioData.skills.map(skill => 
+                    `<span class="skill-tag me-2">${skill}</span>`
+                ).join('');
+            }
+
+            // Display links
+            const linksContainer = document.getElementById('portfolioLinks');
+            const links = [];
+            
+            if (portfolioData.linkedin) {
+                links.push(`<a href="${portfolioData.linkedin}" target="_blank" class="text-decoration-none">
+                    <i class="fab fa-linkedin me-2"></i>LinkedIn
+                </a>`);
+            }
+            
+            if (portfolioData.github) {
+                links.push(`<a href="${portfolioData.github}" target="_blank" class="text-decoration-none">
+                    <i class="fab fa-github me-2"></i>GitHub
+                </a>`);
+            }
+            
+            if (portfolioData.website) {
+                links.push(`<a href="${portfolioData.website}" target="_blank" class="text-decoration-none">
+                    <i class="fas fa-globe me-2"></i>Site web
+                </a>`);
+            }
+            
+            if (portfolioData.portfolio) {
+                links.push(`<a href="${portfolioData.portfolio}" target="_blank" class="text-decoration-none">
+                    <i class="fas fa-briefcase me-2"></i>Portfolio
+                </a>`);
+            }
+
+            if (links.length > 0) {
+                linksContainer.innerHTML = links.join('');
+            } else {
+                linksContainer.innerHTML = '<p class="text-muted">Aucun lien fourni</p>';
+            }
+
+            // Load stats
+            loadStats(portfolioData.id);
+        }
+
+        // Load portfolio stats
+        function loadStats(id) {
+            const stats = JSON.parse(localStorage.getItem(`portfolioStats_${id}`) || '{"views": 0, "likes": 0, "contacts": 0, "shares": 0}');
+            
+            document.getElementById('viewsCount').textContent = stats.views || 0;
+            document.getElementById('likesCount').textContent = stats.likes || 0;
+            document.getElementById('contactsCount').textContent = stats.contacts || 0;
+            document.getElementById('sharesCount').textContent = stats.shares || 0;
+        }
+
+        // Update views count
+        function updateViews() {
+            if (portfolioId) {
+                const stats = JSON.parse(localStorage.getItem(`portfolioStats_${portfolioId}`) || '{"views": 0, "likes": 0, "contacts": 0, "shares": 0}');
+                stats.views = (stats.views || 0) + 1;
+                localStorage.setItem(`portfolioStats_${portfolioId}`, JSON.stringify(stats));
+                loadStats(portfolioId);
+            }
+        }
+
+        // Like portfolio
+        function likePortfolio() {
+            if (portfolioId) {
+                const stats = JSON.parse(localStorage.getItem(`portfolioStats_${portfolioId}`) || '{"views": 0, "likes": 0, "contacts": 0, "shares": 0}');
+                
+                if (isLiked) {
+                    stats.likes = Math.max(0, (stats.likes || 0) - 1);
+                    isLiked = false;
+                    document.getElementById('likeText').textContent = 'Like';
+                    showNotification('Like retiré', 'info');
+                } else {
+                    stats.likes = (stats.likes || 0) + 1;
+                    isLiked = true;
+                    document.getElementById('likeText').textContent = 'Liked!';
+                    showNotification('Portfolio liké !', 'success');
+                }
+                
+                localStorage.setItem(`portfolioStats_${portfolioId}`, JSON.stringify(stats));
+                loadStats(portfolioId);
+            }
+        }
+
+        // Contact portfolio
+        function contactPortfolio() {
+            if (portfolioId) {
+                const stats = JSON.parse(localStorage.getItem(`portfolioStats_${portfolioId}`) || '{"views": 0, "likes": 0, "contacts": 0, "shares": 0}');
+                stats.contacts = (stats.contacts || 0) + 1;
+                localStorage.setItem(`portfolioStats_${portfolioId}`, JSON.stringify(stats));
+                loadStats(portfolioId);
+                
+                showNotification('Ouverture de la messagerie...', 'info');
+            }
+        }
+
+        // Share portfolio
+        function sharePortfolio() {
+            if (portfolioId) {
+                const stats = JSON.parse(localStorage.getItem(`portfolioStats_${portfolioId}`) || '{"views": 0, "likes": 0, "contacts": 0, "shares": 0}');
+                stats.shares = (stats.shares || 0) + 1;
+                localStorage.setItem(`portfolioStats_${portfolioId}`, JSON.stringify(stats));
+                loadStats(portfolioId);
+                
+                const portfolioUrl = window.location.href;
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Portfolio Vachellia',
+                        text: 'Découvrez ce portfolio professionnel',
+                        url: portfolioUrl
+                    });
+                } else {
+                    navigator.clipboard.writeText(portfolioUrl).then(() => {
+                        showNotification('Lien copié dans le presse-papiers !', 'success');
+                    });
+                }
+            }
+        }
+
+        // Get demo portfolios
+        function getDemoPortfolios() {
+            return [
+                {
+                    id: 'demo_1',
+                    firstName: 'Marie',
+                    lastName: 'Dubois',
+                    title: 'Développeuse Full-Stack',
+                    location: 'Paris, France',
+                    description: 'Développeuse expérimentée avec 5 ans d\'expérience en React, Node.js et Python. Spécialisée dans les applications web modernes et les APIs REST.',
+                    skills: ['React', 'Node.js', 'Python', 'MongoDB'],
+                    experience: '5 ans d\'expérience en développement web full-stack',
+                    education: 'Master en Informatique - Université de Paris',
+                    linkedin: 'https://linkedin.com/in/marie-dubois',
+                    github: 'https://github.com/marie-dubois'
+                },
+                {
+                    id: 'demo_2',
+                    firstName: 'Sophie',
+                    lastName: 'Laurent',
+                    title: 'UX/UI Designer',
+                    location: 'Lyon, France',
+                    description: 'Designer créative passionnée par l\'expérience utilisateur. Expertise en Figma, Adobe Creative Suite et prototypage interactif.',
+                    skills: ['Figma', 'Adobe XD', 'Sketch', 'Prototypage'],
+                    experience: '3 ans d\'expérience en design UX/UI',
+                    education: 'Bachelor en Design Graphique - École de Design Lyon',
+                    linkedin: 'https://linkedin.com/in/sophie-laurent',
+                    website: 'https://sophie-laurent.design'
+                }
+            ];
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} position-fixed`;
+            notification.style.cssText = `
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                min-width: 300px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            `;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" onclick="this.parentElement.remove()"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

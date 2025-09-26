@@ -614,3 +614,53 @@
     </script>
 </body>
 </html>
+
+        // Portfolio interactions with redirection
+        document.querySelectorAll('.portfolio-btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.portfolio-card');
+                const title = card.querySelector('.portfolio-title').textContent;
+                
+                if (this.innerHTML.includes('Like')) {
+                    this.innerHTML = '<i class="fas fa-heart me-2"></i>Liked!';
+                    this.classList.add('btn-success');
+                    this.classList.remove('portfolio-btn-primary');
+                    card.classList.add('liked');
+                    
+                    // Show success message
+                    showNotification(`Vous avez liké ${title}!`, 'success');
+                }
+            });
+        });
+
+        document.querySelectorAll('.portfolio-btn-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.portfolio-card');
+                const title = card.querySelector('.portfolio-title').textContent;
+                
+                // Redirect to portfolio view
+                const portfolioId = card.getAttribute('data-portfolio-id') || 'demo_' + Math.floor(Math.random() * 1000);
+                window.location.href = `portfolio-view.html?id=${portfolioId}`;
+            });
+        });
+
+        // Add click event to portfolio cards for redirection
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't redirect if clicking on buttons
+                if (e.target.closest('.portfolio-btn')) {
+                    return;
+                }
+                
+                const portfolioId = this.getAttribute('data-portfolio-id') || 'demo_' + Math.floor(Math.random() * 1000);
+                window.location.href = `portfolio-view.html?id=${portfolioId}`;
+            });
+            
+            // Add hover effect
+            card.style.cursor = 'pointer';
+        });
+
+        // Add portfolio IDs to existing cards
+        document.querySelectorAll('.portfolio-card').forEach((card, index) => {
+            card.setAttribute('data-portfolio-id', `demo_${index + 1}`);
+        });
