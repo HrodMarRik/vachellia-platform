@@ -1,0 +1,15 @@
+# Logo Vachellia
+
+Pour utiliser le logo Vachellia :
+
+1. Placez votre fichier logo dans ce dossier avec le nom : Vachellia.png
+2. Le logo doit être en format PNG avec transparence
+3. Taille recommandée : 200x200px minimum
+4. Couleurs : Gold (#D4AF37) sur fond transparent
+
+Le logo sera automatiquement affiché dans :
+- La navigation (navbar)
+- Le footer
+- Toutes les pages du site
+
+Si vous n'avez pas encore le logo, le site fonctionnera sans problème avec un placeholder.

@@ -1,54 +1,56 @@
-/* Vachellia - Charte Graphique Personnalisée avec Mode Sombre */
+/* Vachellia - Charte Graphique Moderne avec Mode Sombre */
 
 :root {
-    /* Couleurs principales */
-    --vachellia-blue-night: #1A365D;
-    --vachellia-gold: #FFD700;
-    --vachellia-emerald: #2E8B57;
-    --vachellia-light-gray: #E0E0E0;
-    --vachellia-light-blue: #6BA3C8;
-    --vachellia-light-green: #90EE90;
-    --vachellia-bordeaux: #8B0000;
+    /* Couleurs modernes principales */
+    --vachellia-teal: #2D5A5A;
+    --vachellia-gold: #D4AF37;
+    --vachellia-emerald: #00C896;
+    --vachellia-light-gray: #F5F7FA;
+    --vachellia-light-blue: #4A90E2;
+    --vachellia-light-green: #7ED321;
+    --vachellia-coral: #FF6B6B;
+    --vachellia-purple: #8B5CF6;
+    --vachellia-orange: #FF8C42;
     
     /* Mode clair */
     --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --bg-tertiary: #e9ecef;
-    --text-primary: #212529;
-    --text-secondary: #6c757d;
-    --text-muted: #adb5bd;
-    --border-color: #dee2e6;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-muted: #94a3b8;
+    --border-color: #e2e8f0;
+    --shadow-color: rgba(0, 0, 0, 0.08);
     --card-bg: #ffffff;
     
     /* Couleurs Bootstrap personnalisées */
-    --bs-primary: var(--vachellia-blue-night);
+    --bs-primary: var(--vachellia-teal);
     --bs-secondary: var(--vachellia-gold);
     --bs-success: var(--vachellia-emerald);
     --bs-info: var(--vachellia-light-blue);
-    --bs-warning: var(--vachellia-gold);
-    --bs-danger: var(--vachellia-bordeaux);
+    --bs-warning: var(--vachellia-orange);
+    --bs-danger: var(--vachellia-coral);
     --bs-light: var(--vachellia-light-gray);
 }
 
 /* Mode sombre */
 [data-theme="dark"] {
-    --bg-primary: #1a1a1a;
-    --bg-secondary: #2d2d2d;
-    --bg-tertiary: #404040;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --text-muted: #808080;
-    --border-color: #404040;
-    --shadow-color: rgba(0, 0, 0, 0.3);
-    --card-bg: #2d2d2d;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --card-bg: #1e293b;
     
     /* Ajustements pour le mode sombre */
-    --vachellia-blue-night: #4a90e2;
-    --vachellia-gold: #ffed4e;
-    --vachellia-emerald: #4ade80;
-    --vachellia-light-blue: #60a5fa;
-    --vachellia-light-green: #86efac;
+    --vachellia-teal: #14b8a6;
+    --vachellia-gold: #fbbf24;
+    --vachellia-emerald: #10b981;
+    --vachellia-light-blue: #3b82f6;
+    --vachellia-light-green: #22c55e;
 }
 
 /* Variables globales */
@@ -56,6 +58,7 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Mode sombre toggle */
@@ -67,21 +70,22 @@ body {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 50px;
-    padding: 8px 16px;
-    box-shadow: 0 4px 12px var(--shadow-color);
+    padding: 10px 16px;
+    box-shadow: 0 8px 32px var(--shadow-color);
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .theme-toggle:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px var(--shadow-color);
+    box-shadow: 0 12px 40px var(--shadow-color);
 }
 
 .theme-toggle-btn {
     background: none;
     border: none;
     color: var(--text-primary);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -90,116 +94,161 @@ body {
     transform: rotate(180deg);
 }
 
-/* Override Bootstrap colors */
-.btn-primary {
-    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 100%);
-    border: none;
-    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+/* Logo moderne */
+.vachellia-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--vachellia-teal);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     transition: all 0.3s ease;
+}
+
+.vachellia-logo:hover {
+    color: var(--vachellia-gold);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.vachellia-logo img {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+    transition: all 0.3s ease;
+}
+
+.vachellia-logo:hover img {
+    transform: scale(1.1);
+}
+
+/* Override Bootstrap colors modernes */
+.btn-primary {
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 100%);
+    border: none;
+    box-shadow: 0 4px 20px rgba(45, 90, 90, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(26, 54, 93, 0.4);
-    background: linear-gradient(135deg, #0f2a47 0%, #5a8fb0 100%);
+    box-shadow: 0 8px 30px rgba(45, 90, 90, 0.4);
+    background: linear-gradient(135deg, #1a4a4a 0%, #00a67a 100%);
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, var(--vachellia-gold) 0%, #ffed4e 100%);
+    background: linear-gradient(135deg, var(--vachellia-gold) 0%, #f4d03f 100%);
     border: none;
-    color: var(--vachellia-blue-night);
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    color: var(--vachellia-teal);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-secondary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-    color: var(--vachellia-blue-night);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+    color: var(--vachellia-teal);
 }
 
 .btn-success {
-    background: linear-gradient(135deg, var(--vachellia-emerald) 0%, #4ade80 100%);
+    background: linear-gradient(135deg, var(--vachellia-emerald) 0%, #00d4aa 100%);
     border: none;
-    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 200, 150, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-success:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 200, 150, 0.4);
 }
 
 .btn-info {
-    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, #60a5fa 100%);
+    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, #5ba3f5 100%);
     border: none;
-    box-shadow: 0 4px 15px rgba(107, 163, 200, 0.3);
+    box-shadow: 0 4px 20px rgba(74, 144, 226, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-info:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(107, 163, 200, 0.4);
+    box-shadow: 0 8px 30px rgba(74, 144, 226, 0.4);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--vachellia-orange) 0%, #ff9f5a 100%);
+    border: none;
+    box-shadow: 0 4px 20px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 140, 66, 0.4);
 }
 
 .btn-danger {
-    background: linear-gradient(135deg, var(--vachellia-bordeaux) 0%, #dc2626 100%);
+    background: linear-gradient(135deg, var(--vachellia-coral) 0%, #ff8a8a 100%);
     border: none;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-danger:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
 }
 
 /* Boutons spéciaux Vachellia */
 .btn-like {
-    background: linear-gradient(135deg, var(--vachellia-light-green) 0%, #86efac 100%);
+    background: linear-gradient(135deg, var(--vachellia-light-green) 0%, #8ee53f 100%);
     border: none;
-    color: var(--vachellia-blue-night);
-    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.3);
+    color: white;
+    box-shadow: 0 4px 20px rgba(126, 211, 33, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-like:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.4);
-    color: var(--vachellia-blue-night);
+    box-shadow: 0 8px 30px rgba(126, 211, 33, 0.4);
+    color: white;
 }
 
 .btn-dislike {
-    background: linear-gradient(135deg, var(--vachellia-bordeaux) 0%, #dc2626 100%);
+    background: linear-gradient(135deg, var(--vachellia-coral) 0%, #ff8a8a 100%);
     border: none;
-    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
     transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .btn-dislike:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
 }
 
 /* Navigation moderne */
 .navbar {
     background: var(--card-bg) !important;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 20px var(--shadow-color);
+    box-shadow: 0 4px 32px var(--shadow-color);
     transition: all 0.3s ease;
-}
-
-.navbar-brand {
-    font-weight: bold;
-    color: var(--vachellia-blue-night) !important;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand:hover {
-    color: var(--vachellia-gold) !important;
-    transform: scale(1.05);
+    padding: 1rem 0;
 }
 
 .navbar-nav .nav-link {
@@ -207,33 +256,38 @@ body {
     font-weight: 500;
     position: relative;
     transition: all 0.3s ease;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 8px;
 }
 
 .navbar-nav .nav-link:hover {
     color: var(--vachellia-gold) !important;
     transform: translateY(-1px);
+    background: rgba(212, 175, 55, 0.1);
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--vachellia-blue-night) !important;
+    color: var(--vachellia-teal) !important;
     font-weight: 600;
+    background: rgba(45, 90, 90, 0.1);
 }
 
 .navbar-nav .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    width: 30px;
+    width: 20px;
     height: 3px;
-    background: linear-gradient(90deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    background: linear-gradient(90deg, var(--vachellia-teal), var(--vachellia-gold));
     border-radius: 2px;
 }
 
 /* Header avec gradient moderne */
 .vachellia-header {
-    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 50%, var(--vachellia-gold) 100%);
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 50%, var(--vachellia-gold) 100%);
     color: white;
     padding: 4rem 0;
     position: relative;
@@ -273,7 +327,7 @@ body {
 }
 
 .card-header {
-    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 100%);
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 100%);
     color: white;
     border-bottom: none;
     border-radius: 20px 20px 0 0 !important;
@@ -297,7 +351,7 @@ body {
 .form-control:focus {
     background: var(--card-bg);
     border-color: var(--vachellia-gold);
-    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
     transform: translateY(-2px);
 }
 
@@ -309,7 +363,7 @@ body {
 
 /* Footer moderne */
 .vachellia-footer {
-    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, #0f2a47 100%);
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, #1a4a4a 100%);
     color: white;
     padding: 3rem 0 2rem;
     position: relative;
@@ -327,7 +381,7 @@ body {
 
 /* Hero section moderne */
 .vachellia-hero {
-    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 50%, var(--vachellia-gold) 100%);
+    background: linear-gradient(135deg, var(--vachellia-teal) 0%, var(--vachellia-emerald) 50%, var(--vachellia-gold) 100%);
     color: white;
     padding: 6rem 0;
     text-align: center;
@@ -363,28 +417,10 @@ body {
     z-index: 1;
 }
 
-/* Logo moderne */
-.vachellia-logo {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--vachellia-blue-night);
-    text-decoration: none;
-    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    transition: all 0.3s ease;
-}
-
-.vachellia-logo:hover {
-    transform: scale(1.05);
-    text-decoration: none;
-}
-
 /* Portfolio Grid moderne */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     padding: 2rem 0;
 }
@@ -411,7 +447,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(26, 54, 93, 0.1), rgba(255, 215, 0, 0.1));
+    background: linear-gradient(135deg, rgba(45, 90, 90, 0.1), rgba(212, 175, 55, 0.1));
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
@@ -466,7 +502,7 @@ body {
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, var(--vachellia-light-blue), var(--vachellia-blue-night));
+    background: linear-gradient(135deg, var(--vachellia-light-blue), var(--vachellia-teal));
     color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
@@ -491,13 +527,13 @@ body {
 }
 
 .portfolio-btn-primary {
-    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-light-blue));
+    background: linear-gradient(135deg, var(--vachellia-teal), var(--vachellia-emerald));
     color: white;
 }
 
 .portfolio-btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(26, 54, 93, 0.3);
+    box-shadow: 0 8px 20px rgba(45, 90, 90, 0.3);
 }
 
 .portfolio-btn-secondary {
@@ -508,7 +544,7 @@ body {
 
 .portfolio-btn-secondary:hover {
     background: var(--vachellia-gold);
-    color: var(--vachellia-blue-night);
+    color: var(--vachellia-teal);
     border-color: var(--vachellia-gold);
 }
 
@@ -532,7 +568,7 @@ body {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    background: linear-gradient(90deg, var(--vachellia-teal), var(--vachellia-gold));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -549,12 +585,12 @@ body {
 
 .matching-card.liked {
     border-color: var(--vachellia-light-green);
-    background: linear-gradient(135deg, rgba(144, 238, 144, 0.1), rgba(46, 139, 87, 0.1));
+    background: linear-gradient(135deg, rgba(126, 211, 33, 0.1), rgba(0, 200, 150, 0.1));
 }
 
 .matching-card.disliked {
-    border-color: var(--vachellia-bordeaux);
-    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(220, 38, 38, 0.1));
+    border-color: var(--vachellia-coral);
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 138, 138, 0.1));
 }
 
 /* Profile images modernes */
@@ -575,12 +611,12 @@ body {
 
 /* Stats modernes */
 .stat-card {
-    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, var(--vachellia-blue-night) 100%);
+    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, var(--vachellia-teal) 100%);
     color: white;
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
-    box-shadow: 0 8px 32px rgba(107, 163, 200, 0.3);
+    box-shadow: 0 8px 32px rgba(74, 144, 226, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -600,7 +636,7 @@ body {
 
 .stat-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(107, 163, 200, 0.4);
+    box-shadow: 0 20px 40px rgba(74, 144, 226, 0.4);
 }
 
 .stat-card:hover::before {
@@ -713,7 +749,7 @@ body {
     .theme-toggle {
         top: 15px;
         right: 15px;
-        padding: 6px 12px;
+        padding: 8px 12px;
     }
     
     .card {
@@ -722,6 +758,14 @@ body {
     
     .portfolio-card {
         border-radius: 15px;
+    }
+    
+    .vachellia-logo {
+        font-size: 1.5rem;
+    }
+    
+    .vachellia-logo img {
+        height: 35px;
     }
 }
 
@@ -757,21 +801,21 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    background: linear-gradient(135deg, var(--vachellia-teal), var(--vachellia-gold));
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, var(--vachellia-gold), var(--vachellia-blue-night));
+    background: linear-gradient(135deg, var(--vachellia-gold), var(--vachellia-teal));
 }
 
 /* Sélection de texte */
 ::selection {
     background: var(--vachellia-gold);
-    color: var(--vachellia-blue-night);
+    color: var(--vachellia-teal);
 }
 
 ::-moz-selection {
     background: var(--vachellia-gold);
-    color: var(--vachellia-blue-night);
+    color: var(--vachellia-teal);
 }
