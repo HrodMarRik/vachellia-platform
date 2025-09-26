@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Vachellia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="vachellia-custom.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand vachellia-logo" href="index.html">
+                <i class="fas fa-handshake me-2"></i>Vachellia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Produit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="chart.html">Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-2"></i>Mon Profil
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Mon profil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <div class="vachellia-header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="h3 mb-0">
+                        <i class="fas fa-chart-line me-2"></i>Tableau de bord Analytics
+                    </h1>
+                    <p class="mb-0 text-white-50">Suivez vos performances et optimisez votre profil</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="period" id="week" autocomplete="off" checked>
+                        <label class="btn btn-outline-light" for="week">7 jours</label>
+                        
+                        <input type="radio" class="btn-check" name="period" id="month" autocomplete="off">
+                        <label class="btn btn-outline-light" for="month">30 jours</label>
+                        
+                        <input type="radio" class="btn-check" name="period" id="year" autocomplete="off">
+                        <label class="btn btn-outline-light" for="year">1 an</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container-fluid py-4">
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-eye fa-2x"></i>
+                        </div>
+                        <div>
+                            <div class="stat-number">1,234</div>
+                            <p class="mb-0">Vues de profil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-heart fa-2x"></i>
+                        </div>
+                        <div>
+                            <div class="stat-number">89</div>
+                            <p class="mb-0">Likes reçus</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-comments fa-2x"></i>
+                        </div>
+                        <div>
+                            <div class="stat-number">45</div>
+                            <p class="mb-0">Messages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <div class="d-flex align-items-center">
+                        <div class="me-3">
+                            <i class="fas fa-handshake fa-2x"></i>
+                        </div>
+                        <div>
+                            <div class="stat-number">23</div>
+                            <p class="mb-0">Connexions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-4 mb-4">
+            <!-- Profile Views Chart -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-line me-2"></i>Évolution des vues de profil
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="profileViewsChart" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Engagement Chart -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-pie me-2"></i>Engagement
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity and Top Matches -->
+        <div class="row g-4">
+            <!-- Recent Activity -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-history me-2"></i>Activité récente
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item border-0 px-0">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-eye text-primary"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Profil consulté</h6>
+                                        <p class="mb-0 text-muted">Par Marie Dubois - Il y a 2 heures</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="list-group-item border-0 px-0">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-heart text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Like reçu</h6>
+                                        <p class="mb-0 text-muted">De Pierre Martin - Il y a 4 heures</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="list-group-item border-0 px-0">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-comment text-info"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Nouveau message</h6>
+                                        <p class="mb-0 text-muted">De Sophie Laurent - Il y a 6 heures</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="list-group-item border-0 px-0">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-handshake text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Nouvelle connexion</h6>
+                                        <p class="mb-0 text-muted">Avec Jean Dupont - Il y a 1 jour</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Matches -->
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-star me-2"></i>Meilleurs matches
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/50x50/2E8B57/FFFFFF?text=MD" 
+                                         alt="Match" class="rounded-circle me-3">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Marie Dubois</h6>
+                                        <p class="mb-0 text-muted">Développeuse Full-Stack</p>
+                                        <div class="progress" style="height: 4px;">
+                                            <div class="progress-bar bg-success" style="width: 95%"></div>
+                                        </div>
+                                        <small class="text-muted">95% de compatibilité</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/50x50/FFD700/1A365D?text=PM" 
+                                         alt="Match" class="rounded-circle me-3">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Pierre Martin</h6>
+                                        <p class="mb-0 text-muted">Product Manager</p>
+                                        <div class="progress" style="height: 4px;">
+                                            <div class="progress-bar bg-warning" style="width: 87%"></div>
+                                        </div>
+                                        <small class="text-muted">87% de compatibilité</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/50x50/6BA3C8/FFFFFF?text=SL" 
+                                         alt="Match" class="rounded-circle me-3">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Sophie Laurent</h6>
+                                        <p class="mb-0 text-muted">UX Designer</p>
+                                        <div class="progress" style="height: 4px;">
+                                            <div class="progress-bar bg-info" style="width: 82%"></div>
+                                        </div>
+                                        <small class="text-muted">82% de compatibilité</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/50x50/8B0000/FFFFFF?text=JD" 
+                                         alt="Match" class="rounded-circle me-3">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-1">Jean Dupont</h6>
+                                        <p class="mb-0 text-muted">Data Scientist</p>
+                                        <div class="progress" style="height: 4px;">
+                                            <div class="progress-bar bg-danger" style="width: 78%"></div>
+                                        </div>
+                                        <small class="text-muted">78% de compatibilité</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="row g-4 mt-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-chart-bar me-2"></i>Métriques de performance
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <h3 class="text-primary">12.5%</h3>
+                                    <p class="text-muted mb-0">Taux de réponse</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <h3 class="text-success">3.2 jours</h3>
+                                    <p class="text-muted mb-0">Temps de réponse moyen</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <h3 class="text-info">156</h3>
+                                    <p class="text-muted mb-0">Profils consultés</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <h3 class="text-warning">89%</h3>
+                                    <p class="text-muted mb-0">Profil complet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="vachellia-footer mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Vachellia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="index.html" class="text-light-50 me-3">Accueil</a>
+                    <a href="about.html" class="text-light-50 me-3">À propos</a>
+                    <a href="contact.html" class="text-light-50">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Profile Views Chart
+        const profileViewsCtx = document.getElementById('profileViewsChart').getContext('2d');
+        new Chart(profileViewsCtx, {
+            type: 'line',
+            data: {
+                labels: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+                datasets: [{
+                    label: 'Vues de profil',
+                    data: [12, 19, 3, 5, 2, 3, 8],
+                    borderColor: '#1A365D',
+                    backgroundColor: 'rgba(26, 54, 93, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Engagement Chart
+        const engagementCtx = document.getElementById('engagementChart').getContext('2d');
+        new Chart(engagementCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Likes', 'Messages', 'Connexions', 'Vues'],
+                datasets: [{
+                    data: [89, 45, 23, 1234],
+                    backgroundColor: [
+                        '#90EE90',
+                        '#6BA3C8',
+                        '#FFD700',
+                        '#2E8B57'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // Period toggle functionality
+        document.querySelectorAll('input[name="period"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.checked) {
+                    // Update charts based on selected period
+                    console.log('Period changed to:', this.id);
+                    // Here you would typically fetch new data and update charts
+                }
+            });
+        });
+    </script>
+</body>
+</html>

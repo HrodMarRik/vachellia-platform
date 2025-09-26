@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produit - Vachellia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="vachellia-custom.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand vachellia-logo" href="index.html">
+                <i class="fas fa-handshake me-2"></i>Vachellia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Tarifs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vachellia-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-4">Découvrez Vachellia</h1>
+                    <p class="lead mb-4">
+                        La plateforme qui révolutionne la mise en relation professionnelle avec un système de matching intelligent 
+                        inspiré de LinkedIn et Tinder.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="register.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Commencer maintenant
+                        </a>
+                        <a href="#demo" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-play me-2"></i>Voir la démo
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400/1A365D/FFFFFF?text=Vachellia+Dashboard" 
+                         alt="Dashboard Vachellia" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Fonctionnalités principales</h2>
+                    <p class="lead text-muted">
+                        Découvrez les outils qui font de Vachellia la plateforme de référence pour la mise en relation professionnelle
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-brain fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Matching Intelligent</h5>
+                            <p class="card-text">
+                                Algorithme avancé qui analyse vos compétences, secteurs et localisations pour vous proposer 
+                                les connexions les plus pertinentes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-heart fa-3x text-success"></i>
+                            </div>
+                            <h5 class="card-title">Système Like/Dislike</h5>
+                            <p class="card-text">
+                                Interface intuitive inspirée de Tinder pour exprimer rapidement votre intérêt 
+                                et initier des contacts professionnels.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-user-circle fa-3x text-info"></i>
+                            </div>
+                            <h5 class="card-title">Portfolios Complets</h5>
+                            <p class="card-text">
+                                Créez et personnalisez votre portfolio professionnel pour vous démarquer 
+                                et attirer les bonnes opportunités.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-comments fa-3x text-warning"></i>
+                            </div>
+                            <h5 class="card-title">Messagerie Intégrée</h5>
+                            <p class="card-text">
+                                Communiquez directement avec les profils qui vous intéressent grâce à notre 
+                                système de messagerie sécurisé.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-search fa-3x text-danger"></i>
+                            </div>
+                            <h5 class="card-title">Recherche Avancée</h5>
+                            <p class="card-text">
+                                Filtrez et trouvez précisément les profils qui correspondent à vos critères 
+                                avec nos outils de recherche puissants.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-chart-line fa-3x text-primary"></i>
+                            </div>
+                            <h5 class="card-title">Analytics Détaillées</h5>
+                            <p class="card-text">
+                                Suivez vos performances et optimisez votre profil avec des statistiques 
+                                détaillées sur vos interactions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Comment ça marche ?</h2>
+                    <p class="lead text-muted">
+                        En quelques étapes simples, connectez-vous avec les professionnels qui vous correspondent
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <div class="mx-auto d-flex align-items-center justify-content-center rounded-circle bg-primary text-white" 
+                                 style="width: 80px; height: 80px;">
+                                <span class="fs-2 fw-bold">1</span>
+                            </div>
+                        </div>
+                        <h5>Créez votre profil</h5>
+                        <p class="text-muted">
+                            Remplissez votre portfolio avec vos compétences, expériences et objectifs professionnels.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <div class="mx-auto d-flex align-items-center justify-content-center rounded-circle bg-success text-white" 
+                                 style="width: 80px; height: 80px;">
+                                <span class="fs-2 fw-bold">2</span>
+                            </div>
+                        </div>
+                        <h5>Découvrez des profils</h5>
+                        <p class="text-muted">
+                            Notre algorithme vous propose des profils compatibles basés sur vos critères.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <div class="mx-auto d-flex align-items-center justify-content-center rounded-circle bg-warning text-white" 
+                                 style="width: 80px; height: 80px;">
+                                <span class="fs-2 fw-bold">3</span>
+                            </div>
+                        </div>
+                        <h5>Likez et connectez-vous</h5>
+                        <p class="text-muted">
+                            Exprimez votre intérêt et initiez des conversations avec les profils qui vous plaisent.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <div class="mx-auto d-flex align-items-center justify-content-center rounded-circle bg-info text-white" 
+                                 style="width: 80px; height: 80px;">
+                                <span class="fs-2 fw-bold">4</span>
+                            </div>
+                        </div>
+                        <h5>Développez votre réseau</h5>
+                        <p class="text-muted">
+                            Construisez des relations professionnelles durables et développez votre carrière.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Voir Vachellia en action</h2>
+                    <p class="lead text-muted mb-4">
+                        Découvrez comment notre plateforme facilite la mise en relation professionnelle 
+                        avec une interface intuitive et des fonctionnalités puissantes.
+                    </p>
+                    
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="fas fa-play-circle fa-2x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Démo interactive</h6>
+                                    <p class="mb-0 text-muted">Testez les fonctionnalités principales</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="fas fa-users fa-2x text-success"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Cas d'usage réels</h6>
+                                    <p class="mb-0 text-muted">Découvrez comment nos utilisateurs réussissent</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="fas fa-chart-bar fa-2x text-info"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Résultats concrets</h6>
+                                    <p class="mb-0 text-muted">Voyez l'impact sur votre carrière</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="register.html" class="btn btn-primary btn-lg me-3">
+                            <i class="fas fa-rocket me-2"></i>Essayer maintenant
+                        </a>
+                        <button class="btn btn-outline-primary btn-lg" onclick="playDemo()">
+                            <i class="fas fa-play me-2"></i>Voir la démo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <img src="https://via.placeholder.com/600x400/6BA3C8/FFFFFF?text=Demo+Vachellia" 
+                             alt="Démo Vachellia" class="img-fluid rounded shadow">
+                        <div class="position-absolute top-50 start-50 translate-middle">
+                            <button class="btn btn-primary btn-lg rounded-circle" 
+                                    style="width: 80px; height: 80px;" onclick="playDemo()">
+                                <i class="fas fa-play fa-2x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4">Ce que disent nos utilisateurs</h2>
+                    <p class="lead text-muted">
+                        Découvrez les témoignages de professionnels qui ont révolutionné leur carrière avec Vachellia
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <img src="https://via.placeholder.com/80x80/2E8B57/FFFFFF?text=JD" 
+                                     alt="Témoignage" class="rounded-circle">
+                            </div>
+                            <h6 class="card-title">Jean Dupont</h6>
+                            <p class="text-muted mb-3">Développeur Full-Stack</p>
+                            <p class="card-text">
+                                "Vachellia m'a permis de trouver mon poste de rêve en seulement 2 semaines. 
+                                L'algorithme de matching est vraiment impressionnant !"
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <img src="https://via.placeholder.com/80x80/FFD700/1A365D?text=SM" 
+                                     alt="Témoignage" class="rounded-circle">
+                            </div>
+                            <h6 class="card-title">Sophie Martin</h6>
+                            <p class="text-muted mb-3">Freelance Designer</p>
+                            <p class="card-text">
+                                "En tant que freelance, Vachellia m'aide à trouver des clients de qualité. 
+                                L'interface est intuitive et les résultats sont au rendez-vous."
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <img src="https://via.placeholder.com/80x80/8B0000/FFFFFF?text=PL" 
+                                     alt="Témoignage" class="rounded-circle">
+                            </div>
+                            <h6 class="card-title">Pierre Laurent</h6>
+                            <p class="text-muted mb-3">RH Manager</p>
+                            <p class="card-text">
+                                "Nous avons recruté 3 talents exceptionnels grâce à Vachellia. 
+                                La qualité des profils proposés est remarquable."
+                            </p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Prêt à révolutionner votre carrière ?</h2>
+                    <p class="lead mb-4">
+                        Rejoignez des milliers de professionnels qui utilisent déjà Vachellia pour développer leur réseau et trouver de nouvelles opportunités.
+                    </p>
+                    <a href="register.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>Commencer gratuitement
+                    </a>
+                    <a href="pricing.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-tags me-2"></i>Voir les tarifs
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vachellia-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-handshake me-2"></i>Vachellia
+                    </h5>
+                    <p class="mb-3">La plateforme qui révolutionne la mise en relation professionnelle.</p>
+                    <div class="d-flex">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Plateforme</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light-50">À propos</a></li>
+                        <li><a href="pricing.html" class="text-light-50">Tarifs</a></li>
+                        <li><a href="blog.html" class="text-light-50">Blog</a></li>
+                        <li><a href="contact.html" class="text-light-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Recherche d'emploi</a></li>
+                        <li><a href="#" class="text-light-50">Recrutement</a></li>
+                        <li><a href="#" class="text-light-50">Freelance</a></li>
+                        <li><a href="#" class="text-light-50">Alternance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Aide</a></li>
+                        <li><a href="#" class="text-light-50">FAQ</a></li>
+                        <li><a href="#" class="text-light-50">CGU</a></li>
+                        <li><a href="#" class="text-light-50">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Légal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Mentions légales</a></li>
+                        <li><a href="#" class="text-light-50">RGPD</a></li>
+                        <li><a href="#" class="text-light-50">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Vachellia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Fait avec <i class="fas fa-heart text-danger"></i> en France</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        function playDemo() {
+            // Simulate demo playback
+            const button = event.target.closest('button');
+            const originalContent = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Chargement...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-check me-2"></i>Démo lancée !';
+                button.classList.remove('btn-primary', 'btn-outline-primary');
+                button.classList.add('btn-success');
+                
+                // Show demo modal or redirect
+                setTimeout(() => {
+                    alert('Démo interactive lancée ! Découvrez les fonctionnalités de Vachellia.');
+                    button.innerHTML = originalContent;
+                    button.classList.remove('btn-success');
+                    button.classList.add('btn-primary');
+                    button.disabled = false;
+                }, 2000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

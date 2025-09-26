@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Vachellia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="vachellia-custom.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand vachellia-logo" href="index.html">
+                <i class="fas fa-handshake me-2"></i>Vachellia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Tarifs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vachellia-header">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-4">Contactez-nous</h1>
+                    <p class="lead">Nous sommes là pour vous accompagner dans votre parcours professionnel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">
+                                <i class="fas fa-envelope me-2"></i>Envoyez-nous un message
+                            </h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <form action="#" method="post">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">
+                                            <i class="fas fa-user me-2"></i>Prénom
+                                        </label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">
+                                            <i class="fas fa-user me-2"></i>Nom
+                                        </label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">
+                                        <i class="fas fa-envelope me-2"></i>Adresse email
+                                    </label>
+                                    <input type="email" class="form-control" id="email" name="email" 
+                                           placeholder="votre@email.com" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">
+                                        <i class="fas fa-tag me-2"></i>Sujet
+                                    </label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="">Sélectionnez un sujet</option>
+                                        <option value="general">Question générale</option>
+                                        <option value="support">Support technique</option>
+                                        <option value="partnership">Partenariat</option>
+                                        <option value="press">Presse</option>
+                                        <option value="other">Autre</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">
+                                        <i class="fas fa-comment me-2"></i>Message
+                                    </label>
+                                    <textarea class="form-control" id="message" name="message" rows="6" 
+                                              placeholder="Décrivez votre demande..." required></textarea>
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Je souhaite recevoir les actualités de Vachellia
+                                    </label>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Envoyer le message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Contact Info -->
+                    <div class="card shadow-lg border-0 mb-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-info-circle me-2"></i>Informations de contact
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Adresse</h6>
+                                        <p class="mb-0 text-muted">
+                                            123 Avenue des Champs-Élysées<br>
+                                            75008 Paris, France
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-phone fa-2x text-success"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Téléphone</h6>
+                                        <p class="mb-0 text-muted">+33 1 23 45 67 89</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-envelope fa-2x text-info"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Email</h6>
+                                        <p class="mb-0 text-muted">contact@vachellia.fr</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <i class="fas fa-clock fa-2x text-warning"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Horaires</h6>
+                                        <p class="mb-0 text-muted">
+                                            Lun - Ven: 9h00 - 18h00<br>
+                                            Sam: 10h00 - 16h00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="card shadow-lg border-0">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="fas fa-share-alt me-2"></i>Suivez-nous
+                            </h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-outline-primary w-100">
+                                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-outline-info w-100">
+                                        <i class="fab fa-twitter me-2"></i>Twitter
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-outline-primary w-100">
+                                        <i class="fab fa-linkedin-in me-2"></i>LinkedIn
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-outline-danger w-100">
+                                        <i class="fab fa-instagram me-2"></i>Instagram
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h2 class="mb-4">Questions fréquentes</h2>
+                    <p class="lead text-muted">
+                        Trouvez rapidement les réponses à vos questions les plus courantes
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Comment fonctionne le système de matching ?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Notre algorithme analyse vos compétences, votre secteur d'activité, votre localisation et vos préférences pour vous proposer les profils les plus pertinents. Plus vous utilisez la plateforme, plus les recommandations s'améliorent.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    L'inscription est-elle gratuite ?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oui, l'inscription et l'utilisation de base de Vachellia sont entièrement gratuites. Nous proposons également des options premium pour accéder à des fonctionnalités avancées.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Mes données sont-elles sécurisées ?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolument. Nous respectons le RGPD et utilisons un chiffrement de niveau bancaire pour protéger vos données personnelles. Votre vie privée est notre priorité.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Comment puis-je supprimer mon compte ?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Vous pouvez supprimer votre compte à tout moment depuis les paramètres de votre profil. Toutes vos données seront définitivement supprimées dans les 30 jours suivant votre demande.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Prêt à rejoindre Vachellia ?</h2>
+                    <p class="lead mb-4">
+                        Créez votre compte dès maintenant et découvrez une nouvelle façon de vous connecter professionnellement.
+                    </p>
+                    <a href="register.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>Commencer maintenant
+                    </a>
+                    <a href="about.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vachellia-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-handshake me-2"></i>Vachellia
+                    </h5>
+                    <p class="mb-3">La plateforme qui révolutionne la mise en relation professionnelle.</p>
+                    <div class="d-flex">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Plateforme</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light-50">À propos</a></li>
+                        <li><a href="pricing.html" class="text-light-50">Tarifs</a></li>
+                        <li><a href="blog.html" class="text-light-50">Blog</a></li>
+                        <li><a href="contact.html" class="text-light-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Recherche d'emploi</a></li>
+                        <li><a href="#" class="text-light-50">Recrutement</a></li>
+                        <li><a href="#" class="text-light-50">Freelance</a></li>
+                        <li><a href="#" class="text-light-50">Alternance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Aide</a></li>
+                        <li><a href="#" class="text-light-50">FAQ</a></li>
+                        <li><a href="#" class="text-light-50">CGU</a></li>
+                        <li><a href="#" class="text-light-50">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Légal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Mentions légales</a></li>
+                        <li><a href="#" class="text-light-50">RGPD</a></li>
+                        <li><a href="#" class="text-light-50">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Vachellia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Fait avec <i class="fas fa-heart text-danger"></i> en France</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

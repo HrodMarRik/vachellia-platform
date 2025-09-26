@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Vachellia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="vachellia-custom.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand vachellia-logo" href="index.html">
+                <i class="fas fa-handshake me-2"></i>Vachellia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html">Tarifs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Connexion</a>
+                    <a href="register.html" class="btn btn-primary">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="vachellia-hero">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="fade-in-up">Découvrez nos talents</h1>
+                    <p class="lead fade-in-up">Connectez-vous avec les meilleurs professionnels de votre secteur</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="row justify-content-center mt-4 fade-in-up">
+                        <div class="col-md-8">
+                            <div class="input-group input-group-lg">
+                                <input type="text" class="form-control" placeholder="Rechercher par compétence, secteur, localisation...">
+                                <button class="btn btn-secondary" type="button">
+                                    <i class="fas fa-search me-2"></i>Rechercher
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Filters -->
+                    <div class="row justify-content-center mt-3 fade-in-up">
+                        <div class="col-md-10">
+                            <div class="d-flex flex-wrap justify-content-center gap-2">
+                                <button class="btn btn-outline-light active" data-filter="all">Tous</button>
+                                <button class="btn btn-outline-light" data-filter="tech">Tech</button>
+                                <button class="btn btn-outline-light" data-filter="design">Design</button>
+                                <button class="btn btn-outline-light" data-filter="marketing">Marketing</button>
+                                <button class="btn btn-outline-light" data-filter="business">Business</button>
+                                <button class="btn btn-outline-light" data-filter="freelance">Freelance</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Stats -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">1,234</div>
+                        <p class="mb-0">Profils actifs</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">89%</div>
+                        <p class="mb-0">Taux de satisfaction</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">24h</div>
+                        <p class="mb-0">Temps de réponse</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <p class="mb-0">Entreprises partenaires</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio Card 1 -->
+                <div class="portfolio-card" data-category="tech">
+                    <img src="https://via.placeholder.com/400x200/1A365D/FFFFFF?text=Développeur+Full-Stack" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Marie Dubois</h3>
+                        <p class="portfolio-subtitle">Développeuse Full-Stack • Paris, France</p>
+                        <p class="portfolio-description">
+                            Développeuse expérimentée avec 5 ans d'expérience en React, Node.js et Python. 
+                            Spécialisée dans les applications web modernes et les APIs REST.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MongoDB</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 2 -->
+                <div class="portfolio-card" data-category="design">
+                    <img src="https://via.placeholder.com/400x200/2E8B57/FFFFFF?text=UX+Designer" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Sophie Laurent</h3>
+                        <p class="portfolio-subtitle">UX/UI Designer • Lyon, France</p>
+                        <p class="portfolio-description">
+                            Designer créative passionnée par l'expérience utilisateur. 
+                            Expertise en Figma, Adobe Creative Suite et prototypage interactif.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Adobe XD</span>
+                            <span class="skill-tag">Sketch</span>
+                            <span class="skill-tag">Prototypage</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 3 -->
+                <div class="portfolio-card" data-category="marketing">
+                    <img src="https://via.placeholder.com/400x200/FFD700/1A365D?text=Marketing+Digital" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Pierre Martin</h3>
+                        <p class="portfolio-subtitle">Marketing Digital • Marseille, France</p>
+                        <p class="portfolio-description">
+                            Expert en marketing digital avec une forte expertise en SEO, SEM et réseaux sociaux. 
+                            Résultats prouvés en croissance d'audience et conversion.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">SEO</span>
+                            <span class="skill-tag">Google Ads</span>
+                            <span class="skill-tag">Social Media</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 4 -->
+                <div class="portfolio-card" data-category="business">
+                    <img src="https://via.placeholder.com/400x200/6BA3C8/FFFFFF?text=Product+Manager" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Jean Dupont</h3>
+                        <p class="portfolio-subtitle">Product Manager • Toulouse, France</p>
+                        <p class="portfolio-description">
+                            Product Manager stratégique avec 7 ans d'expérience dans le développement de produits tech. 
+                            Expertise en Agile, Scrum et gestion d'équipes cross-fonctionnelles.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">Product Strategy</span>
+                            <span class="skill-tag">Agile</span>
+                            <span class="skill-tag">Scrum</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 5 -->
+                <div class="portfolio-card" data-category="freelance">
+                    <img src="https://via.placeholder.com/400x200/8B0000/FFFFFF?text=Data+Scientist" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Claire Moreau</h3>
+                        <p class="portfolio-subtitle">Data Scientist • Bordeaux, France</p>
+                        <p class="portfolio-description">
+                            Data Scientist freelance spécialisée en Machine Learning et Intelligence Artificielle. 
+                            Expertise en Python, R, TensorFlow et analyse de données complexes.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">R</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 6 -->
+                <div class="portfolio-card" data-category="tech">
+                    <img src="https://via.placeholder.com/400x200/90EE90/1A365D?text=DevOps+Engineer" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Thomas Bernard</h3>
+                        <p class="portfolio-subtitle">DevOps Engineer • Nantes, France</p>
+                        <p class="portfolio-description">
+                            DevOps Engineer expérimenté spécialisé en infrastructure cloud et automatisation. 
+                            Expertise en AWS, Docker, Kubernetes et CI/CD.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">CI/CD</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 7 -->
+                <div class="portfolio-card" data-category="design">
+                    <img src="https://via.placeholder.com/400x200/FFD700/1A365D?text=Graphic+Designer" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Emma Rousseau</h3>
+                        <p class="portfolio-subtitle">Graphic Designer • Lille, France</p>
+                        <p class="portfolio-description">
+                            Graphiste créative avec une approche moderne et minimaliste. 
+                            Spécialisée en branding, identité visuelle et design print.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">Photoshop</span>
+                            <span class="skill-tag">Illustrator</span>
+                            <span class="skill-tag">InDesign</span>
+                            <span class="skill-tag">Branding</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Card 8 -->
+                <div class="portfolio-card" data-category="business">
+                    <img src="https://via.placeholder.com/400x200/1A365D/FFFFFF?text=Business+Analyst" 
+                         alt="Portfolio" class="portfolio-image">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Lucas Petit</h3>
+                        <p class="portfolio-subtitle">Business Analyst • Strasbourg, France</p>
+                        <p class="portfolio-description">
+                            Business Analyst stratégique avec une forte expertise en analyse de données business. 
+                            Spécialisé en Tableau, Power BI et modélisation financière.
+                        </p>
+                        <div class="portfolio-skills">
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Excel</span>
+                            <span class="skill-tag">SQL</span>
+                        </div>
+                        <div class="portfolio-actions">
+                            <button class="portfolio-btn portfolio-btn-primary">
+                                <i class="fas fa-heart me-2"></i>Like
+                            </button>
+                            <button class="portfolio-btn portfolio-btn-secondary">
+                                <i class="fas fa-envelope me-2"></i>Contacter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" onclick="loadMorePortfolios()">
+                    <i class="fas fa-plus me-2"></i>Charger plus de profils
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4">Prêt à rejoindre notre communauté ?</h2>
+                    <p class="lead mb-4">
+                        Créez votre portfolio et connectez-vous avec les meilleurs professionnels de votre secteur.
+                    </p>
+                    <a href="register.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-rocket me-2"></i>Créer mon portfolio
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vachellia-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3">
+                        <i class="fas fa-handshake me-2"></i>Vachellia
+                    </h5>
+                    <p class="mb-3">La plateforme qui révolutionne la mise en relation professionnelle.</p>
+                    <div class="d-flex">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Plateforme</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light-50">À propos</a></li>
+                        <li><a href="portfolio.html" class="text-light-50">Portfolio</a></li>
+                        <li><a href="pricing.html" class="text-light-50">Tarifs</a></li>
+                        <li><a href="contact.html" class="text-light-50">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Recherche d'emploi</a></li>
+                        <li><a href="#" class="text-light-50">Recrutement</a></li>
+                        <li><a href="#" class="text-light-50">Freelance</a></li>
+                        <li><a href="#" class="text-light-50">Alternance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Aide</a></li>
+                        <li><a href="#" class="text-light-50">FAQ</a></li>
+                        <li><a href="#" class="text-light-50">CGU</a></li>
+                        <li><a href="#" class="text-light-50">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Légal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light-50">Mentions légales</a></li>
+                        <li><a href="#" class="text-light-50">RGPD</a></li>
+                        <li><a href="#" class="text-light-50">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Vachellia. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Fait avec <i class="fas fa-heart text-danger"></i> en France</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = body.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+            }
+        });
+
+        // Portfolio filtering
+        document.querySelectorAll('[data-filter]').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                document.querySelectorAll('[data-filter]').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter portfolio cards
+                const cards = document.querySelectorAll('.portfolio-card');
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        card.classList.add('fade-in-up');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Portfolio interactions
+        document.querySelectorAll('.portfolio-btn-primary').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.portfolio-card');
+                const title = card.querySelector('.portfolio-title').textContent;
+                
+                if (this.innerHTML.includes('Like')) {
+                    this.innerHTML = '<i class="fas fa-heart me-2"></i>Liked!';
+                    this.classList.add('btn-success');
+                    this.classList.remove('portfolio-btn-primary');
+                    card.classList.add('liked');
+                    
+                    // Show success message
+                    showNotification(`Vous avez liké ${title}!`, 'success');
+                }
+            });
+        });
+
+        document.querySelectorAll('.portfolio-btn-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.portfolio-card');
+                const title = card.querySelector('.portfolio-title').textContent;
+                
+                showNotification(`Ouverture de la messagerie avec ${title}...`, 'info');
+            });
+        });
+
+        // Load more portfolios
+        function loadMorePortfolios() {
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Chargement...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.disabled = false;
+                showNotification('Plus de profils chargés!', 'success');
+            }, 2000);
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} position-fixed`;
+            notification.style.cssText = `
+                top: 20px;
+                right: 20px;
+                z-index: 9999;
+                min-width: 300px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            `;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" onclick="this.parentElement.remove()"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+
+        // Search functionality
+        document.querySelector('input[type="text"]').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.portfolio-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

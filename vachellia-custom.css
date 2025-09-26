@@ -1,0 +1,777 @@
+/* Vachellia - Charte Graphique Personnalisée avec Mode Sombre */
+
+:root {
+    /* Couleurs principales */
+    --vachellia-blue-night: #1A365D;
+    --vachellia-gold: #FFD700;
+    --vachellia-emerald: #2E8B57;
+    --vachellia-light-gray: #E0E0E0;
+    --vachellia-light-blue: #6BA3C8;
+    --vachellia-light-green: #90EE90;
+    --vachellia-bordeaux: #8B0000;
+    
+    /* Mode clair */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --text-muted: #adb5bd;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+    
+    /* Couleurs Bootstrap personnalisées */
+    --bs-primary: var(--vachellia-blue-night);
+    --bs-secondary: var(--vachellia-gold);
+    --bs-success: var(--vachellia-emerald);
+    --bs-info: var(--vachellia-light-blue);
+    --bs-warning: var(--vachellia-gold);
+    --bs-danger: var(--vachellia-bordeaux);
+    --bs-light: var(--vachellia-light-gray);
+}
+
+/* Mode sombre */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #404040;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --text-muted: #808080;
+    --border-color: #404040;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --card-bg: #2d2d2d;
+    
+    /* Ajustements pour le mode sombre */
+    --vachellia-blue-night: #4a90e2;
+    --vachellia-gold: #ffed4e;
+    --vachellia-emerald: #4ade80;
+    --vachellia-light-blue: #60a5fa;
+    --vachellia-light-green: #86efac;
+}
+
+/* Variables globales */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode sombre toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 8px 16px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: rotate(180deg);
+}
+
+/* Override Bootstrap colors */
+.btn-primary {
+    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 54, 93, 0.4);
+    background: linear-gradient(135deg, #0f2a47 0%, #5a8fb0 100%);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--vachellia-gold) 0%, #ffed4e 100%);
+    border: none;
+    color: var(--vachellia-blue-night);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    color: var(--vachellia-blue-night);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--vachellia-emerald) 0%, #4ade80 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.4);
+}
+
+.btn-info {
+    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, #60a5fa 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(107, 163, 200, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(107, 163, 200, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--vachellia-bordeaux) 0%, #dc2626 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+}
+
+/* Boutons spéciaux Vachellia */
+.btn-like {
+    background: linear-gradient(135deg, var(--vachellia-light-green) 0%, #86efac 100%);
+    border: none;
+    color: var(--vachellia-blue-night);
+    box-shadow: 0 4px 15px rgba(144, 238, 144, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-like:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 238, 144, 0.4);
+    color: var(--vachellia-blue-night);
+}
+
+.btn-dislike {
+    background: linear-gradient(135deg, var(--vachellia-bordeaux) 0%, #dc2626 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-dislike:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.4);
+}
+
+/* Navigation moderne */
+.navbar {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 20px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--vachellia-blue-night) !important;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: var(--vachellia-gold) !important;
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--vachellia-gold) !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--vachellia-blue-night) !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    border-radius: 2px;
+}
+
+/* Header avec gradient moderne */
+.vachellia-header {
+    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 50%, var(--vachellia-gold) 100%);
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.vachellia-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.vachellia-header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Cards modernes */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 1.5rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Forms modernes */
+.form-control {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    padding: 12px 16px;
+}
+
+.form-control:focus {
+    background: var(--card-bg);
+    border-color: var(--vachellia-gold);
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Footer moderne */
+.vachellia-footer {
+    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, #0f2a47 100%);
+    color: white;
+    padding: 3rem 0 2rem;
+    position: relative;
+}
+
+.vachellia-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--vachellia-gold), transparent);
+}
+
+/* Hero section moderne */
+.vachellia-hero {
+    background: linear-gradient(135deg, var(--vachellia-blue-night) 0%, var(--vachellia-light-blue) 50%, var(--vachellia-gold) 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vachellia-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    opacity: 0.5;
+}
+
+.vachellia-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.vachellia-hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo moderne */
+.vachellia-logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--vachellia-blue-night);
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.vachellia-logo:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+/* Portfolio Grid moderne */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.portfolio-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px var(--shadow-color);
+}
+
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.1), rgba(255, 215, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.portfolio-card:hover::before {
+    opacity: 1;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+    transform: scale(1.1);
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-description {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--vachellia-light-blue), var(--vachellia-blue-night));
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.portfolio-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.portfolio-btn {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.portfolio-btn-primary {
+    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-light-blue));
+    color: white;
+}
+
+.portfolio-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 54, 93, 0.3);
+}
+
+.portfolio-btn-secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+}
+
+.portfolio-btn-secondary:hover {
+    background: var(--vachellia-gold);
+    color: var(--vachellia-blue-night);
+    border-color: var(--vachellia-gold);
+}
+
+/* Matching cards modernes */
+.matching-card {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.matching-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.matching-card:hover {
+    border-color: var(--vachellia-gold);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    transform: translateY(-5px);
+}
+
+.matching-card:hover::before {
+    opacity: 1;
+}
+
+.matching-card.liked {
+    border-color: var(--vachellia-light-green);
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.1), rgba(46, 139, 87, 0.1));
+}
+
+.matching-card.disliked {
+    border-color: var(--vachellia-bordeaux);
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), rgba(220, 38, 38, 0.1));
+}
+
+/* Profile images modernes */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--vachellia-gold);
+    box-shadow: 0 8px 20px var(--shadow-color);
+    transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+/* Stats modernes */
+.stat-card {
+    background: linear-gradient(135deg, var(--vachellia-light-blue) 0%, var(--vachellia-blue-night) 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(107, 163, 200, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(107, 163, 200, 0.4);
+}
+
+.stat-card:hover::before {
+    opacity: 1;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--vachellia-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations modernes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+/* Loading spinner moderne */
+.vachellia-spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--vachellia-gold);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive moderne */
+@media (max-width: 768px) {
+    .vachellia-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .vachellia-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 6px 12px;
+    }
+    
+    .card {
+        border-radius: 15px;
+    }
+    
+    .portfolio-card {
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .vachellia-hero {
+        padding: 4rem 0;
+    }
+    
+    .vachellia-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .portfolio-content {
+        padding: 1rem;
+    }
+    
+    .portfolio-actions {
+        flex-direction: column;
+    }
+    
+    .portfolio-btn {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--vachellia-blue-night), var(--vachellia-gold));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--vachellia-gold), var(--vachellia-blue-night));
+}
+
+/* Sélection de texte */
+::selection {
+    background: var(--vachellia-gold);
+    color: var(--vachellia-blue-night);
+}
+
+::-moz-selection {
+    background: var(--vachellia-gold);
+    color: var(--vachellia-blue-night);
+}
